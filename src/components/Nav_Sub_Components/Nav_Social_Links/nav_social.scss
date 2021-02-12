@@ -1,0 +1,22 @@
+.social-links {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+
+  .btns {
+    margin: auto;
+
+    .fa-github {
+      margin-right: 25px;
+    }
+
+    .fa:hover {
+      color: #3d55d1;
+    }
+  }
+
+  @media (max-width: 850px) {
+  }
+}

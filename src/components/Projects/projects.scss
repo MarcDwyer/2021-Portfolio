@@ -1,0 +1,87 @@
+.projects {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+  .intro-skills {
+    order: 0;
+    width: 95%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .skills {
+      margin-bottom: 25px;
+    }
+    .languages {
+      margin-bottom: 25px;
+    }
+  }
+  .project {
+    flex-shrink: 0;
+    width: 95%;
+    flex-wrap: wrap;
+    margin: auto;
+    display: flex;
+    height: auto;
+
+    img {
+      flex: 0 1 auto;
+      -webkit-flex: 0;
+      margin: 15px;
+      border-radius: 10px;
+      width: 550px;
+      height: 350px;
+    }
+    .body {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      .live-demo {
+        margin: 10px auto 25px 0;
+        a {
+          margin-right: 15px;
+          cursor: pointer;
+          padding: 15px 15px;
+        }
+      }
+    }
+
+    @media (max-width: 1450px) {
+      img {
+        margin: 25px auto 25px auto;
+        width: 100%;
+        order: 0;
+      }
+      .body {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.odd {
+  img {
+    order: 0;
+  }
+
+  .body {
+    order: 1;
+  }
+}
+
+.even {
+  img {
+    order: 1;
+  }
+  .body {
+    order: 0;
+  }
+}

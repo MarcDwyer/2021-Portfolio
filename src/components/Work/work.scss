@@ -1,0 +1,81 @@
+.card-flex {
+  width: 100%;
+  display: flex;
+  background-color: transparent;
+
+  .inner-card {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .work-card {
+      width: 450px;
+      border-radius: 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: auto;
+      margin-bottom: 25px;
+
+      .actual-content {
+        width: 100%;
+
+        .headers {
+          display: flex;
+          flex-direction: column;
+          padding: 10px 10px;
+
+          .company-name {
+            font-weight: bold;
+            font-size: 24px;
+          }
+
+          .job-title {
+            margin-top: 8.5px;
+            font-size: 18px;
+          }
+        }
+
+        .inner-content {
+          margin: 10px auto auto auto;
+          display: flex;
+          width: 90%;
+          flex-direction: column;
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+        li {
+          color: inherit;
+          font-size: 18px;
+          font-weight: 550;
+          text-align: start;
+        }
+      }
+
+      @media (max-width: 1650px) {
+        & {
+          width: 55%;
+          margin: 15px auto 15px auto;
+        }
+      }
+
+      @media (max-width: 850px) {
+        & {
+          width: 85%;
+          margin: 15px auto 15px auto;
+        }
+      }
+    }
+
+    @media (max-width: 2150px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.job-title {
+  font-size: 23px;
+}

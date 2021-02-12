@@ -1,0 +1,51 @@
+.master-nav {
+  flex: 0 0 335px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+
+  .theme-toggler {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+.appear {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.theme-changer {
+  display: flex;
+  z-index: 10000;
+  position: sticky;
+  top: 5px;
+  right: 5px;
+
+  @media (max-width: 850px) {
+    position: none;
+  }
+  .sunMoon {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+  * {
+    margin: auto;
+  }
+
+  &:last-child {
+    font-size: 33px;
+  }
+}

@@ -1,0 +1,38 @@
+.sub-contact {
+  text-align: center;
+  margin: auto;
+  background-color: transparent;
+
+  span {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 400;
+    max-width: 100%;
+  }
+}
+
+.contact-info {
+  display: flex;
+  margin-top: 35px;
+
+  a {
+    color: inherit;
+  }
+  i {
+    margin-bottom: 15px;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: column;
+
+    i {
+      font-size: 44px;
+    }
+  }
+}
+
+.card {
+  margin: auto;
+  padding: 25px 25px;
+}
