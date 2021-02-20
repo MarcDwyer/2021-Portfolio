@@ -1,19 +1,25 @@
 .social-links {
   display: flex;
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   left: 0;
   right: 0;
 
   .btns {
+    display: flex;
     margin: auto;
 
-    .fa-github {
-      margin-right: 25px;
-    }
+    div {
+      display: flex;
+      margin: auto 15px auto auto;
+      cursor: pointer;
+      &:hover {
+        color: #3d55d1;
+      }
 
-    .fa:hover {
-      color: #3d55d1;
+      svg {
+        margin: auto;
+      }
     }
   }
 

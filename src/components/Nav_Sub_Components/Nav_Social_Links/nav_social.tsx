@@ -1,18 +1,19 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 import "./nav_social.scss";
 
 const socialLinks = [
   {
     name: "github",
-    cName: "fa fa-github",
+    jsx: <FaGithub />,
     href: "https://github.com/MarcDwyer?tab=repositories",
   },
   {
     name: "linkedIn",
-    cName: "fa fa-linkedin",
+    jsx: <FaLinkedinIn />,
     href: "https://www.linkedin.com/in/marc-dwyer-53087339/",
   },
 ];
@@ -20,7 +21,7 @@ const socialLinks = [
 export default function NavSocialLinks() {
   const { pathname } = useLocation();
   const contactPath = "/contact";
-
+  console.log("rendering");
   const { x, fontSize } = useSpring({
     x: pathname === contactPath ? 1 : 0,
     fontSize: pathname === contactPath ? 50 : 42,
@@ -33,12 +34,11 @@ export default function NavSocialLinks() {
       <div className="btns">
         {socialLinks.map((link, i) => {
           return (
-            <animated.a
+            <animated.div
               key={i}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={link.cName}
+              onClick={() => {
+                window.open(link.href);
+              }}
               style={{
                 //@ts-ignore
                 opacity: x.interpolate({ output: [0.8, 1] }),
@@ -53,7 +53,9 @@ export default function NavSocialLinks() {
                   output: [33, 36, 40, 44, 54],
                 }),
               }}
-            />
+            >
+              {link.jsx}
+            </animated.div>
           );
         })}
       </div>
