@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 
@@ -17,7 +17,7 @@ type Props = {
 };
 const App = observer(({ ts }: Props) => {
   console.log("this is app");
-  useEffect(() => {
+  React.useEffect(() => {
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", ts.handleMediaEvent);

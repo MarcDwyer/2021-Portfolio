@@ -19,18 +19,18 @@ const WorkExp: WorkExperience[] = [
     ],
     currentJob: true,
   },
-  // {
-  //   companyName: "Institute of Human and Machine Cognition",
-  //   title: "Full-Stack Developer",
-  //   currentJob: false,
-  //   duration: "3 months",
-  //   descriptionRole: [
-  //     "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
-  //     "Introduced new deployment methods such as Docker",
-  //     "Communicated with Project Manager and Lead Developer on UI designs, tech stack and best possible solutions to create tool",
-  //     "Created front-end and back-end using modern technologies such as TypeScript, NodeJS and ReactJS",
-  //   ],
-  // },
+  {
+    companyName: "Institute of Human and Machine Cognition",
+    title: "Full-Stack Developer",
+    currentJob: false,
+    duration: "3 months",
+    descriptionRole: [
+      "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
+      "Introduced new deployment methods such as Docker",
+      "Communicated with Project Manager and Lead Developer on UI designs, tech stack and best possible solutions to create tool",
+      "Created front-end and back-end using modern technologies such as TypeScript, NodeJS and ReactJS",
+    ],
+  },
 ];
 
 export default WorkExp;
