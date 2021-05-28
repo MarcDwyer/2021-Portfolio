@@ -33,6 +33,20 @@ const Projects = observer(({ theme }: Props) => {
         <div className="languages">
           <Languages />
         </div>
+        <div
+          className="notice"
+          style={{ borderTop: `1px solid ${theme.borderColor}` }}
+        >
+          <div className="inner-notice">
+            <span className="notice-headline">Notice</span>
+            <p>
+              At the current moment I am unable to keep up with the costs of
+              demo'ing these projects. However, I've provided links to the
+              repository of each project. Hopefully that suffices.
+            </p>
+            <span>Thank you for your understanding.</span>
+          </div>
+        </div>
       </div>
       {PData.map((item, i) => {
         const int = i + 2;

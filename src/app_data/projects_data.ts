@@ -23,7 +23,7 @@ const gopoll: ProjectsType = {
     "This app was inspired by Strawpoll.me. In my opinion a good web app is one that has a simple UI and an interactive experience. With the use of WebSockets and the power of Go, I created websocket rooms using Gorilla's incredible websocket package. With Websocket rooms, I can efficiently broadcast to users viewing specific types of content. In this case, I broadcast only to users viewing the same poll. This application allows the client to create and monitor poll results in real-time!",
   url: "https://i.imgur.com/0SGMtnu.png",
   links: [
-    { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
+    // { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
     { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
   ],
   stack: "React, Go and MongoDB",
@@ -35,13 +35,11 @@ const nsa: ProjectsType = {
   title: "Netflix-Stop-Autoplay",
   details:
     "This is a chrome extension that prevents Netflix from autoplaying videos in desktop enviroments. It was developed using TypeScript.",
-  url:
-    "https://lh3.googleusercontent.com/NBuD6tD6HwVSVhIQT7bxffIHLEoLpwz898ufCR2H901Y9plbFLqr0SJrsmcHrMnrLuJak7w7=w640-h400-e365",
+  url: "https://lh3.googleusercontent.com/NBuD6tD6HwVSVhIQT7bxffIHLEoLpwz898ufCR2H901Y9plbFLqr0SJrsmcHrMnrLuJak7w7=w640-h400-e365",
   links: [
     {
       title: "Store Link",
-      link:
-        "https://chrome.google.com/webstore/detail/netflix-stop-autoplay/fbcmkdogjehincilpicohipinoobijem",
+      link: "https://chrome.google.com/webstore/detail/netflix-stop-autoplay/fbcmkdogjehincilpicohipinoobijem",
     },
     {
       title: "Repository",
@@ -58,10 +56,10 @@ const tf: ProjectsType = {
     "An application that allows the client to lookup who users are following on TwitchTV. Also includes a pretty unique implementation oh recent search history",
   url: "https://i.imgur.com/Gedd4uj.png",
   links: [
-    {
-      title: "Live Demo",
-      link: "https://twitch-followers.marcdwyer.dev/",
-    },
+    // {
+    //   title: "Live Demo",
+    //   link: "https://twitch-followers.marcdwyer.dev/",
+    // },
     {
       title: "Repository",
       link: "https://github.com/MarcDwyer/twitch-followers",
@@ -74,8 +72,7 @@ const hc: ProjectsType = {
   title: "Hue Desktop Controller",
   details:
     "Hue Controller, built using the Electron Framework, allows the client to modify lights connected to their Philips Hue Bridge. It accomplishes this by sending http requests with the modified data to the bridge's own API. The app allows the client to modify the selected lights color values, brightness, power status and much more.",
-  url:
-    "https://github.com/MarcDwyer/hue-desktop-controller/raw/master/icons/hue1.png",
+  url: "https://github.com/MarcDwyer/hue-desktop-controller/raw/master/icons/hue1.png",
   links: [
     {
       title: "Repository",
@@ -93,7 +90,7 @@ const td: ProjectsType = {
     "Twitch Discovery! The purpose of this experimental project is to grant more exposure to streams that have a lower viewership. From my experience, there is an average total of 40,000 livestreams on Twitch at any given time. However, only the top 50 have above 1,000 viewers. The large majority have around 1 - 50 viewers. Twitch, at the current moment sort the streamers by viewership, so it is quite difficult to find content creators with lower viewership. The backend (NodeJS) randomly pulls an array of streamers every 2 hours and then updates the current list of streamers every 6 minutes (to check if they are still live). The frontend (React) allows the client to view the streamers status, viewership and stream details. Oh, and it also lets you interact with the streamer using the embedded twitch chat! The app is still experimental and gets updates on daily basis",
   url: "https://imgur.com/PNX97H4.png",
   links: [
-    { title: "Live Demo", link: "https://discover.marcdwyer.dev" },
+    // { title: "Live Demo", link: "https://discover.marcdwyer.dev" },
     {
       title: "Repository",
       link: "https://github.com/MarcDwyer/twitch-discovery",
@@ -110,7 +107,7 @@ const typer: ProjectsType = {
     "An arcady type racing game that features both a single and multi player game mode. Practice your skills in single player than challenge other opponents in mulit-player.",
   url: "https://i.imgur.com/kwt6Ej0.png",
   links: [
-    { title: "Live Demo", link: "https://typer.marcdwyer.dev/" },
+    // { title: "Live Demo", link: "https://typer.marcdwyer.dev/" },
     {
       title: "Repository",
       link: "https://github.com/MarcDwyer/arcade-typeracer",
@@ -135,8 +132,7 @@ const OkChat: ProjectsType = {
   title: "Ok-Chat",
   details:
     "Ok-Chat is a Desktop application that allows users to join Twitch streamer’s IRC channels. Ok-Chat includes a plethora of features such as user search prediction, color coded messages, efficient memory management, easy to use UI, followed streams tracker and the use of 3rd party emotes like BTTV. It’s important to note that this software is very early in the development process and some of these features may be buggy or not exist yet, but trust me, they will come.",
-  url:
-    "https://camo.githubusercontent.com/ab1ecbf1579fa62974b4c73ea1df4b0fdb3575331c4ca05e1d204007df15dba4/68747470733a2f2f692e696d6775722e636f6d2f485759387235712e706e67",
+  url: "https://camo.githubusercontent.com/ab1ecbf1579fa62974b4c73ea1df4b0fdb3575331c4ca05e1d204007df15dba4/68747470733a2f2f692e696d6775722e636f6d2f485759387235712e706e67",
   links: [
     { title: "Repository", link: "https://github.com/MarcDwyer/Ok-Chat" },
   ],

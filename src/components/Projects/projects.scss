@@ -20,6 +20,20 @@
     .languages {
       margin-bottom: 25px;
     }
+
+    .notice {
+      display: flex;
+
+      .inner-notice {
+        display: flex;
+        flex-direction: column;
+        margin: 25px auto 25px auto;
+        .notice-headline {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
   }
   .project {
     flex-shrink: 0;
