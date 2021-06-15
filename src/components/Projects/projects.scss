@@ -44,12 +44,10 @@
     height: auto;
 
     img {
-      flex: 0 1 auto;
-      -webkit-flex: 0;
       margin: 15px;
       border-radius: 10px;
-      width: 550px;
-      height: 350px;
+      width: 350px;
+      height: 450px;
     }
     .body {
       margin: auto;
@@ -70,7 +68,7 @@
     @media (max-width: 1450px) {
       img {
         margin: 25px auto 25px auto;
-        width: 100%;
+        width: 75%;
         order: 0;
       }
       .body {
