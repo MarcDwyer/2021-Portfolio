@@ -1,6 +1,6 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
-import PData from "../../app_data/projects_data";
+import PData, { Dimensions } from "../../app_data/projects_data";
 import Skills from "../Skills/skills";
 import Languages from "../Languages/languages";
 
@@ -51,6 +51,8 @@ const Projects = observer(({ theme }: Props) => {
       {PData.map((item, i) => {
         const int = i + 2;
         const isEven = int % 2 === 0;
+
+        const imgStyles = "dimensions" in item ? item.dimensions : {};
         return (
           <div
             className={`project ${isEven ? "odd" : "even"}`}
@@ -82,7 +84,9 @@ const Projects = observer(({ theme }: Props) => {
               <span>Stack: {item.stack}</span>
               <p>{item.details}</p>
             </div>
-            {item.url && <img src={item.url} alt="source: imgur.com" />}
+            {item.url && (
+              <img style={imgStyles} src={item.url} alt="source: imgur.com" />
+            )}
           </div>
         );
       })}

@@ -139,7 +139,38 @@ const OkChat: ProjectsType = {
   stack: "TypeScript, React and Electron",
   hosted: "Github",
 };
-const ProjectData: ProjectsType[] = [
+
+const Fitbit: Dimensions = {
+  id: 12312,
+  title: "Fitbit Clockfaces",
+  details:
+    "Fitbit clockfaces are developed using JavaScript or TypeScript and CSS.  Fitbit allows access to it's sensors such as the heart, body presence and much more",
+  url: "https://gallery-assets.fitbit.com/public/NM0kDY.qOYBlNIFmAIWYOY.hC2JtCXotBIVpAL7qO23tOYNrB5BqBV/C2_XBI3sCIFhNYOWNHooBL7rAIVsBnJhNYVtNq7nD5JpOIGX@1x.png",
+  links: [
+    {
+      title: "Cool Watch",
+      link: "https://gallery.fitbit.com/details/ee2777d4-95b6-4f3f-b75c-1f8812f43e80",
+    },
+    {
+      title: "Smooth",
+      link: "https://gallery.fitbit.com/details/f09cc032-1319-426a-8e83-ea9ad8033bac",
+    },
+  ],
+  stack: "TypeScript and CSS",
+  hosted: "Fitbit",
+  dimensions: {
+    width: "275px",
+    height: "275px",
+  },
+};
+export interface Dimensions extends ProjectsType {
+  dimensions: {
+    width: string;
+    height: string;
+  };
+}
+const ProjectData: Array<ProjectsType | Dimensions> = [
+  Fitbit,
   TMI,
   OkChat,
   gopoll,
@@ -150,4 +181,4 @@ const ProjectData: ProjectsType[] = [
   td,
 ];
 
-export default attachId(ProjectData);
+export default ProjectData;
