@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ImageUrls } from "../../../app_data/urls";
 
 import "./profile_styles.scss";
@@ -10,22 +10,47 @@ interface Props {
   theme: ThemeStruct;
   ks: KonamiStore;
 }
+const initialProfileDetails = {
+  name: "Marc Dwyer",
+  profession: "Web Developer",
+  citizenship: "US/EU",
+  image: ImageUrls.myProfile as string,
+};
+type ProfileDetails = typeof initialProfileDetails;
+
+function useProfileDetails(ks: KonamiStore) {
+  const [profileDetails, setProfileDetails] = useState<ProfileDetails>({
+    ...initialProfileDetails,
+  });
+
+  useEffect(() => {
+    if (ks.konami) {
+      setProfileDetails({
+        name: "Roy Mustang",
+        profession: "Fire Alchemist",
+        citizenship: "Amestris citizen",
+        image: "https://i.imgur.com/a7yVYHV.png",
+      });
+    }
+  }, [ks.konami]);
+
+  return profileDetails;
+}
 const Profile = observer(({ theme, ks }: Props) => {
+  const { name, citizenship, profession, image } = useProfileDetails(ks);
   console.log(ks.konami);
   return (
     <div className="profile-main">
       <img
-        src={
-          ks.konami ? "https://i.imgur.com/a7yVYHV.png" : ImageUrls.myProfile
-        }
+        src={image}
         alt="profile"
         style={{ border: `5px solid ${ks.konami ? "red" : theme.borderColor}` }}
       />
       <div className="profile-content">
         <div className="headers">
-          <h2>{ks.konami ? "Roy Mustang" : "Marc Dwyer"}</h2>
-          <h3>{ks.konami ? "Fire Alchemist" : "Web Developer"}</h3>
-          <h4>{ks.konami ? "Amestris citizen" : "US/EU citizen"}</h4>
+          <h2>{name}</h2>
+          <h3>{profession}</h3>
+          <h4>{citizenship}</h4>
         </div>
       </div>
     </div>
