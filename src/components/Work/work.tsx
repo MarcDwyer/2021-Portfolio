@@ -43,7 +43,7 @@ const Work = ({ cardColor }: Props) => {
                     </div>
                   ) : (
                     <span>
-                      {`Worked for: ${job.duration || "No duration given"}`}
+                      {/* {`Worked for: ${job.duration || "No duration given"}`} */}
                     </span>
                   )}
                   <ul>

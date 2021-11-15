@@ -7,6 +7,17 @@ interface WorkExperience {
 }
 const WorkExp: WorkExperience[] = [
   {
+    companyName: "Magnus Technologies",
+    title: "Frontend Developer",
+    descriptionRole: [
+      "Design and architecture of SPAs using React, TypeScript and Redux Toolkit/Mobx",
+      "Refactoring of applications to improve performance and fix bugs",
+      "Setting up development and production environment of new React projects",
+      "Unit testing using popular testing tools like Jest and Enzyme",
+    ],
+    currentJob: true,
+  },
+  {
     companyName: "M&D Technologies",
     title: "Full-Stack Developer",
     descriptionRole: [
@@ -17,13 +28,13 @@ const WorkExp: WorkExperience[] = [
       "Refactoring of applications to improve performance",
       "Developing and documenting of third party modules for Deno",
     ],
-    currentJob: true,
+    currentJob: false,
   },
   {
     companyName: "Institute of Human and Machine Cognition",
     title: "Full-Stack Developer",
     currentJob: false,
-    duration: "3 months",
+    duration: "",
     descriptionRole: [
       "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
       "Introduced new deployment methods such as Docker",
