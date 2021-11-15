@@ -38,7 +38,6 @@ function useProfileDetails(ks: KonamiStore) {
 }
 const Profile = observer(({ theme, ks }: Props) => {
   const { name, citizenship, profession, image } = useProfileDetails(ks);
-  console.log(ks.konami);
   return (
     <div className="profile-main">
       <img

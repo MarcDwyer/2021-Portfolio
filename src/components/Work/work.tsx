@@ -15,7 +15,7 @@ const Work = ({ cardColor }: Props) => {
     from: { transform: "translateX(100%)", opacity: 0 },
   });
   return (
-    <animated.div className="card-flex" style={cardProps}>
+    <animated.div className="card-flex work-page" style={cardProps}>
       <div className="inner-card">
         {WorkExp.map((job, i) => {
           return (

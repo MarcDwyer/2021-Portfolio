@@ -6,19 +6,20 @@
   .inner-card {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 10px auto 10px auto;
 
     .work-card {
       width: 450px;
+      height: 375px;
       border-radius: 0;
       text-align: center;
       display: flex;
       flex-wrap: wrap;
       overflow-y: auto;
-      margin-bottom: 25px;
 
       .actual-content {
         width: 100%;
+        height: 100%;
 
         .headers {
           display: flex;

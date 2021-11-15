@@ -25,7 +25,6 @@ const WorkExp: WorkExperience[] = [
       "Development of React Native mobile application",
       "Built backend REST endpoints using TypeScript, NodeJS, Postgres and Go",
       "Integration of TypeScript, applying OOP principles",
-      "Refactoring of applications to improve performance",
       "Developing and documenting of third party modules for Deno",
     ],
     currentJob: false,
