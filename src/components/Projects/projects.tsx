@@ -1,12 +1,12 @@
-import React from "react";
 import { animated, useSpring } from "react-spring";
-import PData, { Dimensions } from "../../app_data/projects_data";
+import PData from "../../app_data/projects_data";
 import Skills from "../Skills/skills";
 import Languages from "../Languages/languages";
 
 import "./projects.scss";
 import { observer } from "mobx-react-lite";
 import { ThemeStruct } from "../../themes";
+import { nanoid } from "nanoid";
 
 type Props = {
   theme: ThemeStruct;
@@ -41,8 +41,8 @@ const Projects = observer(({ theme }: Props) => {
             <span className="notice-headline">Notice</span>
             <p>
               At the current moment I am unable to keep up with the costs of
-              demo'ing these projects. However, I've provided links to the
-              repository of each project. Hopefully that suffices.
+              demo&apos;ing these projects. However, I&apos;ve provided links to
+              the repository of each project. Hopefully that suffices.
             </p>
             <span>Thank you for your understanding.</span>
           </div>
@@ -56,7 +56,7 @@ const Projects = observer(({ theme }: Props) => {
         return (
           <div
             className={`project ${isEven ? "odd" : "even"}`}
-            key={item.id}
+            key={nanoid()}
             style={{ borderBottom: `solid 1px ${theme.borderColor}` }}
           >
             <div className="body">
@@ -65,7 +65,7 @@ const Projects = observer(({ theme }: Props) => {
                 {item.hosted && <small>-- hosted on {item.hosted}</small>}
               </h2>
               <div className="live-demo">
-                {item.links.map((i, index) => {
+                {item.links.map((i) => {
                   const myTest = /Live|Website|Store/g.test(i.title);
                   return (
                     <a
@@ -73,7 +73,7 @@ const Projects = observer(({ theme }: Props) => {
                       href={i.link}
                       target={i.download ? "" : "_blank"}
                       rel="noopener noreferrer"
-                      key={index}
+                      key={nanoid()}
                       className={myTest ? "live-button" : ""}
                     >
                       {i.title}

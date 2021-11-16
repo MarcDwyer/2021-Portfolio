@@ -24,7 +24,6 @@ export class ThemeStore {
     reaction(
       () => this.isDark,
       (isDark) => {
-        console.log("changing");
         document.body.style.backgroundColor = this.theme.bgColor;
         localStorage.setItem("isDark", JSON.stringify(isDark));
       }

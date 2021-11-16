@@ -37,19 +37,19 @@ function useProfileDetails(ks: KonamiStore) {
   return profileDetails;
 }
 const Profile = observer(({ theme, ks }: Props) => {
-  const { name, citizenship, profession, image } = useProfileDetails(ks);
+  const profile = useProfileDetails(ks);
   return (
     <div className="profile-main">
       <img
-        src={image}
+        src={profile.image}
         alt="profile"
         style={{ border: `5px solid ${ks.konami ? "red" : theme.borderColor}` }}
       />
       <div className="profile-content">
         <div className="headers">
-          <h2>{name}</h2>
-          <h3>{profession}</h3>
-          <h4>{citizenship}</h4>
+          <h2>{profile.name}</h2>
+          <h3>{profile.profession}</h3>
+          <h4>{profile.citizenship}</h4>
         </div>
       </div>
     </div>

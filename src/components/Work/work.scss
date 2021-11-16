@@ -2,20 +2,22 @@
   width: 100%;
   display: flex;
   background-color: transparent;
+  overflow-y: auto;
 
   .inner-card {
     display: flex;
     flex-direction: column;
     margin: 10px auto 10px auto;
+    height: 100%;
 
     .work-card {
       width: 450px;
-      height: 375px;
+      height: 425px;
       border-radius: 0;
       text-align: center;
       display: flex;
       flex-wrap: wrap;
-      overflow-y: auto;
+      margin-bottom: 20px;
 
       .actual-content {
         width: 100%;
@@ -60,7 +62,6 @@
       @media (max-width: 1650px) {
         & {
           width: 55%;
-          margin: 15px auto 15px auto;
         }
       }
 

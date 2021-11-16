@@ -12,6 +12,7 @@ import { observer } from "mobx-react-lite";
 import { ThemeStore } from "../../store/theme_store";
 import { FaMoon, FaSun, FaToggleOff, FaToggleOn } from "react-icons/fa";
 import { KonamiStore } from "../../store/konami_store";
+
 interface InitProps {
   ts: ThemeStore;
 }
@@ -19,7 +20,7 @@ interface InitProps {
 interface Props extends InitProps {
   ks: KonamiStore;
 }
-const Nav = observer(({ ts, ks }: Props) => {
+export const Nav = observer(({ ts, ks }: Props) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   const toggler = useCallback(() => setToggle(!toggle), [toggle]);
@@ -50,6 +51,10 @@ const Nav = observer(({ ts, ks }: Props) => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    ks.handleChange();
+  }, [ks.typed, ks.handleChange]);
   return (
     <div
       className={`master-nav ${toggle ? "appear" : ""}`}
@@ -70,5 +75,3 @@ const Nav = observer(({ ts, ks }: Props) => {
     </div>
   );
 });
-
-export default ({ ts }: InitProps) => <Nav ts={ts} ks={new KonamiStore()} />;

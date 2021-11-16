@@ -1,11 +1,9 @@
 {
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1"
-  },
-  "devDependencies": {
-    "snowpack": "^3.0.1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.ts src/**/*.tsx"
   },
   "dependencies": {
     "@snowpack/plugin-sass": "^1.3.0",
@@ -18,11 +16,14 @@
     "@types/react-router": "^5.1.8",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.3",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vitejs/plugin-react": "^1.0.9",
+    "eslint-plugin-react": "^7.27.0",
     "mobx": "^6.0.4",
     "mobx-react-lite": "^3.1.6",
     "nanoid": "^3.1.20",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "18.0.0-beta-96ca8d915-20211115",
+    "react-dom": "18.0.0-beta-96ca8d915-20211115",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-load-image": "^0.1.7",
@@ -32,6 +33,7 @@
     "react-spring": "^8.0.27",
     "sass": "^1.29.0",
     "styled-components": "^5.2.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "vite": "^2.6.14"
   }
 }

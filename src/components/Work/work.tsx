@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring";
 
 import "./work.scss";
 import { NewTheme } from "../../themes";
+import { nanoid } from "nanoid";
 
 type Props = {
   cardColor: string;
@@ -17,11 +18,11 @@ const Work = ({ cardColor }: Props) => {
   return (
     <animated.div className="card-flex work-page" style={cardProps}>
       <div className="inner-card">
-        {WorkExp.map((job, i) => {
+        {WorkExp.map((job) => {
           return (
             <div
               className="card work-card"
-              key={i}
+              key={nanoid()}
               style={{
                 backgroundColor: cardColor,
                 borderColor: NewTheme.navColor,
@@ -47,8 +48,8 @@ const Work = ({ cardColor }: Props) => {
                     </span>
                   )}
                   <ul>
-                    {job.descriptionRole.map((desc, i) => (
-                      <li key={i}>{desc}</li>
+                    {job.descriptionRole.map((desc) => (
+                      <li key={nanoid()}>{desc}</li>
                     ))}
                   </ul>
                 </div>

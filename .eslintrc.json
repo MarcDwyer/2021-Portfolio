@@ -1,0 +1,21 @@
+{
+  "env": { "browser": true, "es2021": true, "jest/globals": true },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jest", "@typescript-eslint"],
+  "rules": {
+    "react/no-array-index-key": "error",
+    "react/jsx-key": "error",
+    "no-unused-vars": "off",
+    "no-console": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "no-useless-escape": "error",
+    "react/react-in-jsx-scope": "off"
+  }
+}

@@ -1,8 +1,10 @@
-import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./src/App";
+import { App } from "./src/App";
 
 import "./index.scss";
+import { ThemeStore } from "./src/store/theme_store";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const themeStore = new ThemeStore();
+
+ReactDOM.render(<App ts={themeStore} />, document.getElementById("root"));

@@ -1,5 +1,4 @@
-import React from "react";
-
+import { nanoid } from "nanoid";
 import "./languages.scss";
 
 export default function Languages() {
@@ -8,10 +7,10 @@ export default function Languages() {
     <div className="language">
       <div className="language-container">
         <span className="fluent-in">Fluent in:</span>
-        {langs.map((l, i) => {
+        {langs.map((lang) => {
           return (
-            <span key={i} className="lang">
-              {l}
+            <span key={nanoid()} className="lang">
+              {lang}
             </span>
           );
         })}

@@ -1,4 +1,4 @@
-import { makeObservable, observable, reaction } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 
 export class KonamiStore {
   word: string = "roymustang";
@@ -10,20 +10,18 @@ export class KonamiStore {
     makeObservable(this, {
       typed: observable,
       konami: observable,
+      handleChange: action,
     });
-
-    reaction(
-      () => this.typed,
-      (typed) => {
-        if (typed === this.word) {
-          console.log(`KONAMI TRIGGERED`);
-          this.konami = true;
-          return;
-        }
-        if (typed.length > this.word.length) {
-          this.typed = typed.substr(1, typed.length);
-        }
-      }
-    );
+  }
+  handleChange() {
+    const { typed, word } = this;
+    if (typed === word) {
+      this.konami = true;
+    } else if (typed.length > word.length) {
+      this.typed = typed.substr(1, typed.length);
+    }
+  }
+  get isMatch() {
+    return this.typed === this.word;
   }
 }

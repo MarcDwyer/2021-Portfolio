@@ -1,9 +1,9 @@
-import React from "react";
 import { NavAppLink } from "./nav_link_styles";
 import { useLocation } from "react-router";
 
 import "./nav_link_styles.scss";
 import { ThemeStruct } from "../../../themes";
+import { nanoid } from "nanoid";
 
 const appLinks = [
   {
@@ -29,15 +29,15 @@ type Props = {
   toggle: boolean;
   theme: ThemeStruct;
 };
-export default function NavLinks({ setToggle, toggle, theme }: Props) {
+export default function NavLinks({ setToggle, theme }: Props) {
   const { pathname } = useLocation();
   return (
     <div className="main-app-links">
-      {appLinks.map((link, i) => {
+      {appLinks.map((link) => {
         return (
           <NavAppLink
             to={link.match}
-            key={i}
+            key={nanoid()}
             onClick={() => setToggle(false)}
             hoverShade={theme.hoverShade}
             style={{

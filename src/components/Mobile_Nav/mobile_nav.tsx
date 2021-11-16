@@ -1,4 +1,3 @@
-import React from "react";
 import { createPortal } from "react-dom";
 import { MobileNavbar, HamburgerMenu } from "./mobile_nav_styles";
 

@@ -1,9 +1,9 @@
-import React from "react";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 import "./nav_social.scss";
+import { nanoid } from "nanoid";
 
 const socialLinks = [
   {
@@ -21,7 +21,7 @@ const socialLinks = [
 export default function NavSocialLinks() {
   const { pathname } = useLocation();
   const contactPath = "/contact";
-  console.log("rendering");
+
   const { x, fontSize } = useSpring({
     x: pathname === contactPath ? 1 : 0,
     fontSize: pathname === contactPath ? 50 : 42,
@@ -32,10 +32,10 @@ export default function NavSocialLinks() {
   return (
     <div className="social-links">
       <div className="btns">
-        {socialLinks.map((link, i) => {
+        {socialLinks.map((link) => {
           return (
             <animated.div
-              key={i}
+              key={nanoid()}
               onClick={() => {
                 window.open(link.href);
               }}
