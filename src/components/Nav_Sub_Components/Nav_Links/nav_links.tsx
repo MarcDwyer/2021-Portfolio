@@ -39,7 +39,7 @@ export default function NavLinks({ setToggle, theme }: Props) {
             to={link.match}
             key={nanoid()}
             onClick={() => setToggle(false)}
-            hoverShade={theme.hoverShade}
+            color={theme.hoverShade}
             style={{
               color: pathname === link.match ? "white" : "",
             }}

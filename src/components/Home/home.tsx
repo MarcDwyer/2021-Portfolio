@@ -1,4 +1,3 @@
-import React from "react";
 import { useSpring } from "react-spring";
 
 import { ProjectHomeBtn } from "../../styled-comps/buttons";
@@ -25,7 +24,7 @@ const Home = observer(({ ts }: Props) => {
           <span>Full-Stack Developer</span>
         </div>
         <ProjectHomeBtn
-          bgColor={ts.theme.btnColor}
+          color={ts.theme.btnColor}
           className="home-projects"
           to="/projects"
         >

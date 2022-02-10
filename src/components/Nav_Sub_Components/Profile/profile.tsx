@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ImageUrls } from "../../../app_data/urls";
 
 import "./profile_styles.scss";

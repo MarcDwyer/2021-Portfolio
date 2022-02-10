@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 type NavLinkProps = {
-  hoverShade: string;
+  color: string;
 };
 export const NavAppLink = styled(Link)<NavLinkProps>`
   width: 100%;
@@ -15,6 +15,6 @@ export const NavAppLink = styled(Link)<NavLinkProps>`
     margin: auto;
   }
   &:hover {
-    background-color: ${(p) => p.hoverShade};
+    background-color: ${(p: NavLinkProps) => p.color};
   }
 `;

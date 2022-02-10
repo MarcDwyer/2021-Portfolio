@@ -34,11 +34,10 @@ export default function NavSocialLinks() {
       <div className="btns">
         {socialLinks.map((link) => {
           return (
-            <animated.div
+            <animated.a
               key={nanoid()}
-              onClick={() => {
-                window.open(link.href);
-              }}
+              href={link.href}
+              target="_blank"
               style={{
                 //@ts-ignore
                 opacity: x.interpolate({ output: [0.8, 1] }),
@@ -55,7 +54,7 @@ export default function NavSocialLinks() {
               }}
             >
               {link.jsx}
-            </animated.div>
+            </animated.a>
           );
         })}
       </div>
