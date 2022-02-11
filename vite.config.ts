@@ -23,6 +23,9 @@ const development = () => ({
 
 const production = () => ({
   ...baseConfig,
+  build: {
+    outDir: "build",
+  },
 });
 export default defineConfig(({ command }) => {
   return command === "serve" ? development() : production();
