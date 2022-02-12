@@ -1,1 +1,11 @@
-/*   /build/index.html   200
+/*   /index.html   200
+
+/marcdwyer/about  /about 301
+/about /marcdwyer/index.html 200
+/marcdwyer/projects  /projects 301
+/projects /marcdwyer/index.html 200
+/marcdwyer/contact  /contact 301
+/contact /marcdwyer/index.html 200
+/marcdwyer/work  /work 301
+/work /marcdwyer/index.html 200
+
