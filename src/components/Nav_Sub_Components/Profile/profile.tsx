@@ -12,7 +12,7 @@ interface Props {
 }
 const initialProfileDetails = {
   name: "Marc Dwyer",
-  profession: "Web Developer",
+  profession: "Front-End Engineer",
   citizenship: "US/EU",
   image: ImageUrls.myProfile as string,
 };
@@ -48,7 +48,7 @@ const Profile = observer(({ theme, ks }: Props) => {
       <div className="profile-content">
         <div className="headers">
           <h2>{profile.name}</h2>
-          <h3>{profile.profession}</h3>
+          <h4>{profile.profession}</h4>
           <h4>{profile.citizenship}</h4>
         </div>
       </div>

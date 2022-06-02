@@ -21,7 +21,7 @@ const Home = observer(({ ts }: Props) => {
       <div className="welcome" style={iProps}>
         <div className="home-header">
           <span className="first-header">MARC DWYER</span>
-          <span>Full-Stack Developer</span>
+          <span>Front-End Engineer</span>
         </div>
         <ProjectHomeBtn
           color={ts.theme.btnColor}
